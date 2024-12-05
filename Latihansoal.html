@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Website Belajar Matematika</title>
+
+    <!-- Font Awesome CDN untuk ikon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* Reset dan Styling Umum */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #082f51;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+
+        .nav-links a:hover {
+            background-color: #5a6268;
+        }
+
+        /* Main Content */
+        main {
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .background-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #082f51;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto;
+            width: 100%;
+        }
+
+        /* Media Queries untuk Responsiveness */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 10px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                width: 100%;
+                text-align: left;
+            }
+
+            main {
+                margin: 10px;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .nav-links {
+                gap: 5px;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+
+        /* Styling khusus untuk latihan soal */
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .soal {
+            background: #e7f3fe;
+            border-left: 5px solid #2196F3;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .soal p {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .soal input {
+            width: 80%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .soal button {
+            padding: 10px 15px;
+            background-color: #0e5dac;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .soal button:hover {
+            background-color: #0d4e9c;
+        }
+
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .benar {
+            color: green;
+        }
+
+        .salah {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="logo">Website Belajar Matematika</div>
+    <div class="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links">
+        <li><a href="UTSWEBSITE1.html"><i class="fas fa-home"></i> Beranda</a></li>
+        <li><a href="Materi.html"><i class="fas fa-book"></i> Materi</a></li>
+        <li><a href="contohsoal.html"><i class="fas fa-edit"></i> Contoh Soal</a></li>
+        <li><a href="Latihansoal.html"><i class="fas fa-pencil-alt"></i> Latihan</a></li>
+        <li><a href="kuis.html"><i class="fas fa-question-circle"></i> Kuis</a></li>
+         <li><a href="kontak.html"><i class="fas fa-question-circle"></i> Kontak</a></li>
+    </ul>
+</nav>
+
+<!-- Main Content -->
+<main>
+    <div class="container">
+        <h1>Latihan Soal Perbandingan Senilai</h1>
+        <p class="note">Perhatikan instruksi setiap soal dan jawab dengan teliti. Jawaban hanya ditulis berupa angka tanpa tanda baca. Selamat mencoba!</p>
+
+        <!-- Soal 1 -->
+        <div class="soal" id="soal1">
+            <p>1. Sebuah pabrik menghasilkan 120 produk dalam 8 jam. Berapa banyak produk yang dihasilkan dalam 5 jam?</p>
+            <input type="number" placeholder="Masukkan jawaban Anda" id="jawaban1">
+            <button onclick="cekJawaban(1, 75)">Cek Jawaban</button>
+            <div class="feedback" id="feedback1"></div>
+        </div>
+
+        <!-- Soal 2 -->
+        <div class="soal" id="soal2">
+            <p>2. Untuk memasak 3 kg nasi, dibutuhkan 6 liter air. Berapakah liter air yang dibutuhkan untuk memasak 7 kg nasi?</p>
+            <input type="number" placeholder="Masukkan jawaban Anda" id="jawaban2">
+            <button onclick="cekJawaban(2, 14)">Cek Jawaban</button>
+            <div class="feedback" id="feedback2"></div>
+        </div>
+
+        <!-- Soal 3 -->
+        <div class="soal" id="soal3">
+            <p>3. Sebuah grafik menunjukkan data berikut:<br>2 jam → 30 liter<br>4 jam → ____ liter<br>Jika pola perbandingannya tetap, berapa banyak liter air pada 4 jam?</p>
+            <input type="number" placeholder="Masukkan jawaban Anda" id="jawaban3">
+            <button onclick="cekJawaban(3, 60)">Cek Jawaban</button>
+            <div class="feedback" id="feedback3"></div>
+        </div>
+
+        <!-- Soal 4 -->
+        <div class="soal" id="soal4">
+            <p>4. Seorang pelukis membutuhkan waktu 12 jam untuk melukis dinding berukuran 24 meter persegi. Jika dinding yang akan dilukis memiliki ukuran 36 meter persegi, berapa jam yang dibutuhkan?</p>
+            <input type="number" placeholder="Masukkan jawaban Anda" id="jawaban4">
+            <button onclick="cekJawaban(4, 18)">Cek Jawaban</button>
+            <div class="feedback" id="feedback4"></div>
+        </div>
+
+        <!-- Soal 5 -->
+        <div class="soal" id="soal5">
+            <p>5. Dalam 2 jam, sebuah mesin memproduksi 120 kotak. Jika sebuah kotak harus dibagi ke dalam 3 unit barang kecil, berapa total unit barang kecil yang bisa dibuat dalam 6 jam?</p>
+            <input type="number" placeholder="Masukkan jawaban Anda" id="jawaban5">
+            <button onclick="cekJawaban(5, 1080)">Cek Jawaban</button>
+            <div class="feedback" id="feedback5"></div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Perbandingan Senilai. Kinanta Arseti Marga Pendika.</p>
+</footer>
+
+<script>
+    // Fungsi untuk mengecek jawaban
+    function cekJawaban(soalId, kunciJawaban) {
+        const jawabanInput = document.getElementById(`jawaban${soalId}`).value;
+        const feedbackElement = document.getElementById(`feedback${soalId}`);
+        if (parseInt(jawabanInput) === kunciJawaban) {
+            feedbackElement.textContent = "Jawaban Anda benar!";
+            feedbackElement.className = "feedback benar";
+        } else {
+            feedbackElement.textContent = "Jawaban Anda salah. Coba lagi!";
+            feedbackElement.className = "feedback salah";
+        }
+    }
+
+    // Toggle menu untuk responsive
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+</script>
+
+</body>
+</html>

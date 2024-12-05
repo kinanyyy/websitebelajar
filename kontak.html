@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Saya</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fa;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(90deg, #082f51, #082f51);
+            padding: 10px 20px;
+            color: #eeeff0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 10px 10px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #fffffd;
+        }
+
+        .burger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background: white;
+            transition: all 0.3s;
+        }
+
+        /* Contact Page Specific Styles */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .contact-photo {
+            width: 100%;
+            max-width: 250px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .contact-photo:hover {
+            transform: scale(1.05);
+        }
+
+        .contact-info {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            line-height: 1.8;
+        }
+
+        .contact-info h2 {
+            color: #082f51;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .contact-info strong {
+            color: #082f51;
+            font-weight: bold;
+        }
+
+        .social-media {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-media a {
+            font-size: 2rem;
+            color: #082f51;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #0056a0;
+        }
+
+        footer {
+            background: #082f51;
+            color: hsl(0, 1%, 55%);
+            text-align: center;
+            padding: 1rem 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+            letter-spacing: 0.5px;
+            font-weight: 400;
+            color: rgb(142, 139, 139) !important;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .contact-photo {
+                max-width: 200px;
+                margin: 0 auto;
+            }
+
+            .contact-info {
+                padding: 20px;
+            }
+
+            .social-media {
+                justify-content: center;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: #4a90e2;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .burger {
+                display: flex;
+            }
+
+            .burger.toggle .line1 {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            .burger.toggle .line2 {
+                opacity: 0;
+            }
+
+            .burger.toggle .line3 {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Website Belajar Matematika</div>
+            <ul class="nav-links">
+                <li><a href="UTSWEBSITE1.html"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="Materi.html"><i class="fas fa-book"></i> Materi</a></li>
+                <li><a href="contohsoal.html"><i class="fas fa-pencil-alt"></i> Contoh Soal</a></li>
+                <li><a href="Latihansoal.html"><i class="fas fa-edit"></i> Latihan</a></li>
+                <li><a href="kuis.html"><i class="fas fa-question-circle"></i> Kuis</a></li>
+                <li><a href="kontak.html"><i class="fas fa-envelope"></i> Kontak</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="contact-container">
+            <!-- Profile Photo Section -->
+            <div class="contact-photo">
+                <img src="arseti.jpg" alt="Your Photo">
+            </div>
+
+            <!-- Contact Information Section -->
+            <div class="contact-info">
+                <h2>Hubungi Saya</h2>
+                <p><strong>Nama:</strong> Kinanta Arseti Marga Pendika</p>
+                <p><strong>Tempat, Tanggal Lahir:</strong> Empang, 18 Agustus 2004</p>
+                <p><strong>Alamat:</strong> Kuranji, Labu Api, Lombok Barat, Mataram</p>
+                <p><strong>Pendidikan:</strong> Mahasiswa Universitas Mataram, Fakultas Matematika dan Ilmu Pengetahuan Alam</p>
+                <p><strong>Email:</strong> kinantaarseti06@gmail.com</p>
+                <p><strong>Nomor HP:</strong> +62 223 6324 029</p>
+
+                <h3>Ikuti Saya di Media Sosial</h3>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/share/18Qefn1hpu/?mibextid=LQQJ4d" target="_blank" class="fab fa-facebook"></a>
+                    <a href="https://www.instagram.com/qnntaaa/profilecard/?igsh=MWNhcnZqbG1xcGt3YQ==" target="_blank" class="fab fa-instagram"></a>
+                </div>
+            </div>
+        </div>
+    </div

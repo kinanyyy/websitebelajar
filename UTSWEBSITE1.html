@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Perbandingan Senilai</title>
+
+    <!-- Font Awesome CDN untuk ikon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* Reset dan Styling Umum */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #082f51;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+
+        .nav-links a:hover {
+            background-color: #5a6268;
+        }
+
+        /* Main Content */
+        main {
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .background-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #082f51;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto;
+            width: 100%;
+        }
+
+        /* Media Queries untuk Responsiveness */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 10px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                width: 100%;
+                text-align: left;
+            }
+
+            main {
+                margin: 10px;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .nav-links {
+                gap: 5px;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="logo">Website Belajar Matematika</div>
+    <div class="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links">
+        <ul class="nav-links">
+            <li><a href="UTSWEBSITE1.html"><i class="fas fa-home"></i> Beranda</a></li>
+            <li><a href="Materi.html"><i class="fas fa-book"></i> Materi</a></li>
+            <li><a href="contohsoal.html"><i class="fas fa-edit"></i> Contoh Soal</a></li>
+            <li><a href="Latihansoal.html"><i class="fas fa-pencil-alt"></i> Latihan</a></li>
+            <li><a href="kuis.html"><i class="fas fa-question-circle"></i> Kuis</a></li>
+            <li><a href="kontak.html"><i class="fas fa-envelope"></i> Kontak</a></li>
+        </ul>
+    </nav>
+
+<!-- Main Content -->
+<main>
+    <section class="home">
+        <div class="container">
+            <h1>PERBANDINGAN SENILAI KELAS 7</h1>
+            <p>“Selamat datang di dunia Perbandingan Senilai! Di sini, belajar matematika jadi mudah dan menyenangkan. Temukan cara praktis dan interaktif untuk memahami perbandingan senilai, dari konsep dasar hingga penerapan dalam kehidupan sehari-hari. Nikmati video tutorial, materi, contoh soal, latihan soal, dan kuis belajar yang dirancang khusus untuk membuatmu lebih percaya diri. Yuk, mulai petualangan belajarmu sekarang dan taklukkan konsep perbandingan senilai bersama kami!”</p>
+            <img src="kin2.jpg" alt="Gambar Latar" class="background-image">
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Perbandingan Senilai. Kinanta Arseti Marga Pendika.</p>
+</footer>
+
+<!-- JavaScript untuk menu hamburger -->
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>
